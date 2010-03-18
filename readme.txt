@@ -21,7 +21,7 @@ WordpressMu : Same as above
 
 = I can't see any code added to my header or footer when I view my page source =
 
-Your theme needs to have the header and footer actions in place before the `</head>` and before the `<\body>`
+Your theme needs to have the header and footer actions in place before the `</head>` and before the `</body>`
                                                                                                              
 == Screenshots ==
 1. settings page
