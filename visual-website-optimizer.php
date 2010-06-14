@@ -4,7 +4,7 @@ Plugin Name: Visual Website Optimizer
 Plugin URI: http://comluv.com
 Description: Visual Website Optimizer is the world's easiest to use A/B, split and multivariate testing tool. Simply enable the plugin and start running tests on your Wordpress website without doing any other code changes. Visit <a href="http://visualwebsiteoptimizer.com/">Visual Website Optimizer</a> for more details.
 Author: Andy Bailey
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://fiddyp.co.uk
 
 This relies on the actions being present in the themes header.php and footer.php
@@ -25,10 +25,10 @@ $clhf_header_script = '
 <script type=\'text/javascript\'>
 var _vis_opt_account_id = VWO_ID;
 var _vis_opt_protocol = ((\'https:\' == document.location.protocol) ? \'https://\' : \'http://\');
-document.write(unescape(\'%3Cscript src=\"\' + _vis_opt_protocol + \'s3.amazonaws.com/wingify/vis_opt.js\" type=\"text/javascript\"%3E%3C/script%3E\'));
+document.write(\'<script src=\"\' + _vis_opt_protocol + \'s3.amazonaws.com/wingify/vis_opt.js\" type=\"text/javascript\">\' + \'<\\/s\' + \'cript>\');
 </script>
 <script type=\'text/javascript\'>
-if(typeof(_vis_opt_top_initialize) == "function") { document.write(unescape(\'%3Cscript src=\"\' + _vis_opt_protocol + \'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?a=\'+_vis_opt_account_id+\'&random=\'+Math.random()+\'\" type=\"text/javascript\"%3E%3C/script%3E\')); }
+if(typeof(_vis_opt_top_initialize) == "function") { document.write(\'<script src=\"\' + _vis_opt_protocol + \'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a=\'+_vis_opt_account_id+\'&url=\'+encodeURIComponent(document.URL)+\'&random=\'+Math.random()+\'\" type=\"text/javascript\">\' + \'<\\/s\' + \'cript>\'); }
 </script>
 <script type=\'text/javascript\'>
 if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initialize) == "function"){ _vis_opt_top_initialize(); }
