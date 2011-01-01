@@ -4,7 +4,7 @@ Donate link:http://comluv.com/about/donate
 Tags: split testing, analytics, stats, visual web optimizer
 Requires at least: 2.7
 Tested up to: 2.9.2
-Stable tag: 1.0.2
+Stable tag: 1.3
 	
 World's easiest to use A/B, Split and Multivariate testing tool. 
 
@@ -28,8 +28,8 @@ Your theme needs to have the header and footer actions in place before the `</he
 
 == ChangeLog ==
 
-= 1.0.1 =
-* updated code snippet
+=1.3=
+* code snippet updated
 
 =1.0.1=
 * use Website instead of Web in name of functions and readme (branding)

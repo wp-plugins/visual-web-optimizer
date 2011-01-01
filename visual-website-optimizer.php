@@ -1,18 +1,16 @@
 <?php
 /*
 Plugin Name: Visual Website Optimizer
-Plugin URI: http://comluv.com
+Plugin URI: http://visualwebsiteoptimizer.com/
 Description: Visual Website Optimizer is the world's easiest to use A/B, split and multivariate testing tool. Simply enable the plugin and start running tests on your Wordpress website without doing any other code changes. Visit <a href="http://visualwebsiteoptimizer.com/">Visual Website Optimizer</a> for more details.
 Author: Andy Bailey
-Version: 1.0.2
+Version: 1.3
 Author URI: http://fiddyp.co.uk
 
 This relies on the actions being present in the themes header.php and footer.php
 * header.php code before the closing </head> tag
 * 	wp_head();
 *
-* footer.php code before </body> (maybe before last </div>)
-* 	do_action('wp_footer');
 * 	
 */
 
@@ -21,39 +19,29 @@ This relies on the actions being present in the themes header.php and footer.php
 //------------------------------------------------------------------------//
 
 $clhf_header_script = '
-<!-- Start Top Visual Website Optimizer Code -->
+<!-- Start Visual Website Optimizer Code -->
 <script type=\'text/javascript\'>
-var _vis_opt_account_id = VWO_ID;
+var _vis_opt_account_id = 1;
 var _vis_opt_protocol = ((\'https:\' == document.location.protocol) ? \'https://\' : \'http://\');
-document.write(\'<script src=\"\' + _vis_opt_protocol + \'s3.amazonaws.com/wingify/vis_opt.js\" type=\"text/javascript\">\' + \'<\\/s\' + \'cript>\');
+document.write(\'<s\' + \'cript src="\' + _vis_opt_protocol + \'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a=\'+_vis_opt_account_id+\'&url=\'+encodeURIComponent(document.URL)+\'&random=\'+Math.random()+\'" type="text/javascript">\' + \'<\/s\' + \'cript>\');
 </script>
 <script type=\'text/javascript\'>
-if(typeof(_vis_opt_top_initialize) == "function") { document.write(\'<script src=\"\' + _vis_opt_protocol + \'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a=\'+_vis_opt_account_id+\'&url=\'+encodeURIComponent(document.URL)+\'&random=\'+Math.random()+\'\" type=\"text/javascript\">\' + \'<\\/s\' + \'cript>\'); }
+if(typeof(_vis_opt_settings_loaded) == "boolean") { document.write(\'<s\' + \'cript src="\' + _vis_opt_protocol + \'d5phz18u4wuww.cloudfront.net/vis_opt.js" type="text/javascript">\' + \'<\/s\' + \'cript>\'); }
 </script>
 <script type=\'text/javascript\'>
-if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initialize) == "function"){ _vis_opt_top_initialize(); }
+if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initialize) == "function"){ _vis_opt_top_initialize(); 
+vwo_$(document).ready(function() { _vis_opt_bottom_initialize(); }); }
 </script>
-<!-- End Top Visual Website Optimizer Code -->
-';
-
-$clhf_footer_script = '
-<!-- Start Bottom Visual Website Optimizer Code -->
-<script type=\'text/javascript\'>
-if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_bottom_initialize) == "function")
-{_vis_opt_bottom_initialize();}
-</script>
-<!-- End Bottom Visual Website Optimizer Code -->
+<!-- End Visual Website Optimizer Code -->
 ';
 
 //------------------------------------------------------------------------//
 //---Hook-----------------------------------------------------------------//
 //------------------------------------------------------------------------//
-add_action ( 'wp_footer', 'clhf_footercode',10 );
 add_action ( 'wp_head', 'clhf_headercode',1 );
 add_action( 'admin_menu', 'clhf_plugin_menu' );
 add_action( 'admin_init', 'clhf_register_mysettings' );
 add_action( 'admin_notices','clhf_warn_nosettings');
- 
 
 
 //------------------------------------------------------------------------//
@@ -81,15 +69,6 @@ function clhf_headercode(){
 		echo str_replace('VWO_ID',$vwo_id,$clhf_header_script);
 	}
 	
-}
-function clhf_footercode(){
-	// runs in the footer
-	global $clhf_footer_script;
-	$vwo_id = get_option('vwo_id');
-	if($vwo_id){
-		// only output if header was done
-		echo $clhf_footer_script;
-	}
 }
 //------------------------------------------------------------------------//
 //---Page Output Functions------------------------------------------------//
