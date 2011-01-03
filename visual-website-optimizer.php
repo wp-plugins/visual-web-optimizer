@@ -21,7 +21,7 @@ This relies on the actions being present in the themes header.php and footer.php
 $clhf_header_script = '
 <!-- Start Visual Website Optimizer Code -->
 <script type=\'text/javascript\'>
-var _vis_opt_account_id = 1;
+var _vis_opt_account_id = VWO_ID;
 var _vis_opt_protocol = ((\'https:\' == document.location.protocol) ? \'https://\' : \'http://\');
 document.write(\'<s\' + \'cript src="\' + _vis_opt_protocol + \'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a=\'+_vis_opt_account_id+\'&url=\'+encodeURIComponent(document.URL)+\'&random=\'+Math.random()+\'" type="text/javascript">\' + \'<\/s\' + \'cript>\');
 </script>
