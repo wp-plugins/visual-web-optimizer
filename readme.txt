@@ -1,30 +1,28 @@
 === Visual Website Optimizer ===
-Contributors: @commentluv
-Donate link:http://comluv.com/about/donate
+Contributors: @commentluv, VWO
+Plugin Name: Visual Website Optimizer
+Plugin URI: http://wordpress.org/extend/plugins/visual-web-optimizer/
 Tags: split testing, analytics, stats, visual web optimizer
+Donate link:http://comluv.com/about/donate
 Requires at least: 2.7
 Tested up to: 2.9.2
 Stable tag: 2.0
-	
+
 World's easiest to use A/B, Split and Multivariate testing tool. 
 
 == Description ==
+This plugin will allow you to automatically insert the Visual Website Optimizer tracking code. Just enter your VWO Account ID from http://v2.visualwebsiteoptimizer.com/account/
 
-This plugin will allow you to automatically insert the script required to test your site using the Visual Website Optimizer code. Just enter your ID from here http://visualwebsiteoptimizer.com/ to the settings page.
 == Installation ==
-
 Wordpress : Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 WordpressMu : Same as above 
 
 == Frequently Asked Questions ==
-
 = I can't see any code added to my header or footer when I view my page source =
-
 Your theme needs to have the header and footer actions in place before the `</head>` and before the `</body>`
 
 = If I use this plugin, do I need to enter any other code on my website? =
-
 No, this plugin is sufficient by itself
 
 == Screenshots ==
@@ -32,20 +30,22 @@ No, this plugin is sufficient by itself
 2. Settings page (Synchronous Code)
 
 == ChangeLog ==
-
-=2.0=
+= 2.0 =
 * Option to choose between asynchronous or synchronous code
 * Updated code snippet
 * Faster website loading
 
-=1.3=
+= 1.3 =
 * code snippet updated
 
-=1.0.1=
+= 1.0.1 =
 * use Website instead of Web in name of functions and readme (branding)
 
 = 1.0 =
 * First Version
+
+== Upgrade Notice ==
+Option to choose the new asynchronous code. This will make the website load faster
 
 == Configuration ==
 
