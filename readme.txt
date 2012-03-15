@@ -1,12 +1,12 @@
 === Visual Website Optimizer ===
 Contributors: @commentluv, VWO
 Plugin Name: Visual Website Optimizer
-Plugin URI: http://wordpress.org/extend/plugins/visual-web-optimizer/
-Tags: split testing, analytics, stats, visual web optimizer
+Plugin URI: http://visualwebsiteoptimizer.com/
+Tags: split testing, analytics, stats, visual web optimizer, vwo
 Donate link:http://comluv.com/about/donate
 Requires at least: 2.7
-Tested up to: 2.9.2
-Stable tag: 2.0
+Tested up to: 3.3.1
+Stable tag: 2.1
 
 World's easiest to use A/B, Split and Multivariate testing tool. 
 
@@ -30,6 +30,9 @@ No, this plugin is sufficient by itself
 2. Settings page (Synchronous Code)
 
 == ChangeLog ==
+= 2.1 =
+* Better documentation
+
 = 2.0 =
 * Option to choose between asynchronous or synchronous code
 * Updated code snippet

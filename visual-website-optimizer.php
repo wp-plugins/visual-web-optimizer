@@ -4,7 +4,7 @@ Plugin Name: Visual Website Optimizer
 Plugin URI: http://visualwebsiteoptimizer.com/
 Description: Visual Website Optimizer is the world's easiest to use A/B, split and multivariate testing tool. Simply enable the plugin and start running tests on your Wordpress website without doing any other code changes. Visit <a href="http://visualwebsiteoptimizer.com/">Visual Website Optimizer</a> for more details.
 Author: Andy Bailey
-Version: 2.0
+Version: 2.1
 Author URI: http://fiddyp.co.uk
 
 This relies on the actions being present in the themes header.php and footer.php
