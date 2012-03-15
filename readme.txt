@@ -4,7 +4,7 @@ Donate link:http://comluv.com/about/donate
 Tags: split testing, analytics, stats, visual web optimizer
 Requires at least: 2.7
 Tested up to: 2.9.2
-Stable tag: 1.3
+Stable tag: 2.0
 	
 World's easiest to use A/B, Split and Multivariate testing tool. 
 
@@ -22,11 +22,21 @@ WordpressMu : Same as above
 = I can't see any code added to my header or footer when I view my page source =
 
 Your theme needs to have the header and footer actions in place before the `</head>` and before the `</body>`
-                                                                                                             
+
+= If I use this plugin, do I need to enter any other code on my website? =
+
+No, this plugin is sufficient by itself
+
 == Screenshots ==
-1. settings page
+1. Settings page (Asynchronous Code)
+2. Settings page (Synchronous Code)
 
 == ChangeLog ==
+
+=2.0=
+* Option to choose between asynchronous or synchronous code
+* Updated code snippet
+* Faster website loading
 
 =1.3=
 * code snippet updated
