@@ -4,7 +4,10 @@ Plugin Name: Visual Website Optimizer
 Plugin URI: http://visualwebsiteoptimizer.com/
 Description: Visual Website Optimizer is the world's easiest to use A/B, split and multivariate testing tool. Simply enable the plugin and start running tests on your Wordpress website without doing any other code changes. Visit <a href="http://visualwebsiteoptimizer.com/">Visual Website Optimizer</a> for more details.
 Author: Andy Bailey
-Version: 2.1
+Version: 2.2readme.txt
+screenshot-1.png
+screenshot-2.png
+visual-website-optimizer.php
 Author URI: http://fiddyp.co.uk
 
 This relies on the actions being present in the themes header.php and footer.php
@@ -86,7 +89,11 @@ function clhf_headercode(){
 			echo str_replace('VWO_ID', $vwo_id, $clhf_header_script_sync); // only output if options were saved
 		else {
 			$settings_tolerance = get_option('settings_tolerance');
+			if(!is_numeric($settings_tolerance)) $settings_tolerance = 2000;
+
 			$library_tolerance = get_option('library_tolerance');
+			if(!is_numeric($library_tolerance)) $library_tolerance = 1500;
+
 			$clhf_header_script_async = str_replace('VWO_ID', $vwo_id, $clhf_header_script_async);
 			$clhf_header_script_async = str_replace('SETTINGS_TOLERANCE', $settings_tolerance, $clhf_header_script_async);
 			echo str_replace('LIBRARY_TOLERANCE', $library_tolerance, $clhf_header_script_async);

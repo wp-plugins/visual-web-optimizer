@@ -6,7 +6,7 @@ Tags: split testing, analytics, stats, visual web optimizer, vwo
 Donate link:http://comluv.com/about/donate
 Requires at least: 2.7
 Tested up to: 3.3.1
-Stable tag: 2.1
+Stable tag: 2.2
 
 World's easiest to use A/B, Split and Multivariate testing tool. 
 
@@ -30,6 +30,9 @@ No, this plugin is sufficient by itself
 2. Settings page (Synchronous Code)
 
 == ChangeLog ==
+= 2.2 =
+* Bug fix to have default tolerance values when plugin is updated
+
 = 2.1 =
 * Better documentation
 
