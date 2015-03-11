@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Visual Website Optimizer
-Plugin URI: http://visualwebsiteoptimizer.com/
-Description: Visual Website Optimizer is the world's easiest to use A/B, split and multivariate testing tool. Simply enable the plugin and start running tests on your Wordpress website without doing any other code changes. Visit <a href="http://visualwebsiteoptimizer.com/">Visual Website Optimizer</a> for more details.
+Plugin URI: https://vwo.com/
+Description: Visual Website Optimizer is the world's easiest to use A/B, split and multivariate testing tool. Simply enable the plugin and start running tests on your Wordpress website without doing any other code changes. Visit <a href="https://vwo.com/">Visual Website Optimizer</a> for more details.
 Author: Andy Bailey
-Version: 2.3
+Version: 2.4
 screenshot-1.png
 screenshot-2.png
 visual-website-optimizer.php
@@ -92,7 +92,7 @@ function clhf_headercode(){
 			if(!is_numeric($settings_tolerance)) $settings_tolerance = 2000;
 
 			$library_tolerance = get_option('library_tolerance');
-			if(!is_numeric($library_tolerance)) $library_tolerance = 1500;
+			if(!is_numeric($library_tolerance)) $library_tolerance = 2500;
 
 			$clhf_header_script_async = str_replace('VWO_ID', $vwo_id, $clhf_header_script_async);
 			$clhf_header_script_async = str_replace('SETTINGS_TOLERANCE', $settings_tolerance, $clhf_header_script_async);
@@ -107,7 +107,7 @@ function clhf_headercode(){
 function clhf_plugin_options() {
   echo '<div class="wrap">';?>
 	<h2>Visual Website Optimizer</h2>
-	<p>You need to have a <a href="http://visualwebsiteoptimizer.com/">Visual Website Optimizer</a> account in order to use this plugin. This plugin inserts the neccessary code into your Wordpress site automatically without you having to touch anything. In order to use the plugin, you need to enter your VWO Account ID:</p>
+	<p>You need to have a <a href="https://vwo.com/">Visual Website Optimizer</a> account in order to use this plugin. This plugin inserts the neccessary code into your Wordpress site automatically without you having to touch anything. In order to use the plugin, you need to enter your VWO Account ID:</p>
 	<form method="post" action="options.php">
 	<?php settings_fields( 'clhf_vwo_options' ); ?>
 	<table class="form-table">
@@ -120,7 +120,7 @@ function clhf_plugin_options() {
 	        <td>
 		        <input style="vertical-align: text-top;" type="radio" onclick="selectCodeType();" name="code_type" id="code_type_async" value="ASYNC" <?php if(get_option('code_type')!='SYNC') echo "checked"; ?> /> Asynchronous&nbsp;&nbsp;&nbsp;
 		        <input style="vertical-align: text-top;" type="radio" onclick="selectCodeType();" name="code_type" id="code_type_sync" value="SYNC" <?php if(get_option('code_type')=='SYNC') echo "checked"; ?> /> Synchronous
-		        &nbsp;<a href="http://visualwebsiteoptimizer.com/split-testing-blog/asynchronous-code" target="_blank">[Help]</a>
+		        &nbsp;<a href="https://vwo.com/blog/asynchronous-code" target="_blank">[Help]</a>
 	        </td>
         </tr>
 		<tr valign="top" id='asyncOnly1' <?php if(get_option('code_type')=='SYNC') echo "style='display:none;'" ?>>
@@ -129,7 +129,7 @@ function clhf_plugin_options() {
 	    </tr>
 		<tr valign="top" id='asyncOnly2' <?php if(get_option('code_type')=='SYNC') echo "style='display:none;'" ?>>
 	        <th scope="row">Library Timeout</th>
-			<td style="vertical-align: middle;"><input type="text" name="library_tolerance" value="<?php echo get_option('library_tolerance')?get_option('library_tolerance'):1500; ?>" />ms  (default: 1500)</td>
+			<td style="vertical-align: middle;"><input type="text" name="library_tolerance" value="<?php echo get_option('library_tolerance')?get_option('library_tolerance'):2500; ?>" />ms  (default: 2500)</td>
 	    </tr>
 	</table>
 
@@ -150,7 +150,7 @@ function clhf_plugin_options() {
 		}
 	</script>
 	<p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>
-	<p>Your Account ID (a number) can be found in <i>Settings</i> area (top-right) after you <a href="https://v2.visualwebsiteoptimizer.com">login</a> into your Visual Website Optimizer account.</p>
+	<p>Your Account ID (a number) can be found in <i>Settings</i> area (top-right) after you <a href="https://app.vwo.com">login</a> into your Visual Website Optimizer account.</p>
 <?php
   echo '</div>';
 }
