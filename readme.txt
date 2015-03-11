@@ -1,17 +1,17 @@
 === Visual Website Optimizer ===
 Contributors: @commentluv, VWO
 Plugin Name: Visual Website Optimizer
-Plugin URI: http://visualwebsiteoptimizer.com/
+Plugin URI: https://vwo.com/
 Tags: split testing, analytics, stats, visual web optimizer, vwo
 Donate link:http://comluv.com/about/donate
 Requires at least: 2.7
-Tested up to: 3.3.1
-Stable tag: 2.3
+Tested up to: 4.1.1
+Stable tag: 2.4
 
 World's easiest to use A/B, Split and Multivariate testing tool. 
 
 == Description ==
-This plugin will allow you to automatically insert the Visual Website Optimizer tracking code. Just enter your VWO Account ID from http://v2.visualwebsiteoptimizer.com/account/
+This plugin will allow you to automatically insert the Visual Website Optimizer tracking code. Just enter your VWO Account ID from http://app.vwo.com/#/settings
 
 == Installation ==
 Wordpress : Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
@@ -30,6 +30,9 @@ No, this plugin is sufficient by itself
 2. Settings page (Synchronous Code)
 
 == ChangeLog ==
+= 2.4 =
+* Update links
+
 = 2.3 =
 * Minor bug fix
 
